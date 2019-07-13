@@ -1,5 +1,8 @@
 import os
 import argparse
+
+def default_listing(files):
+    print(len(files))
   
 def main():
         parser = argparse.ArgumentParser()
@@ -10,6 +13,7 @@ def main():
         dir_list = os.listdir()
         if args.list_files:
             print(" ".join(dir_list))
+            default_listing(dir_list)
  
  
 if __name__ == '__main__':
